@@ -1,0 +1,19 @@
+# config/locales/ru.yml
+ru:
+  activerecord:
+    errors:
+      models:
+        user:
+          attributes:
+            email:
+              taken: "уже занят"
+            username:
+              blank: "Имя пользователя не может быть пустым."
+            avatar:
+              blank: "Аватар обязателен."
+      messages:
+        blank: "не может быть пустым."
+  errors:
+    messages:
+      taken: "уже занят"
+

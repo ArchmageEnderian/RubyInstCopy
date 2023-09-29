@@ -1,12 +1,13 @@
 Rails.application.routes.draw do
-  devise_for :users
+  #devise_for :users, skip: [:sessions]
 
   root 'posts#index'
 
   get 'profile', to: 'users#profile', as: 'profile'
   get 'progress', to: 'progress#show', as: 'progress'
 
-  # devise_for :users, controllers: { registrations: 'users/registrations' }
+  devise_for :users, controllers: { registrations: 'registrations' }
+
 
   resources :posts, only: %i[index new create edit update show destroy]
   resources :stories, only: %i[index new create show destroy]

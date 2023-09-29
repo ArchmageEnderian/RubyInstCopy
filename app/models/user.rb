@@ -6,6 +6,9 @@ class User < ApplicationRecord
   #
   has_one_attached :avatar
 
+  validates :username, presence: true
+  validates :avatar, presence: true
+
   key_binary = ["ad6eb5ee2e3fdb111705375170e61bc494bc896c5291ad41ea852e8adb627322"].pack('H*')
 
   attr_encrypted :name, key: key_binary
