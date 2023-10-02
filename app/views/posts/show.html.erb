@@ -43,7 +43,7 @@
         <div class="comment-item mt-3 text-left p-3 bg-light rounded">
           <div class="d-flex justify-content-between align-items-center">
             <div class="d-flex align-items-center">
-              <%= image_tag(comment.user.avatar, width: 40, height: 40, class: 'rounded-circle mr-2') if comment.user.avatar.attached? %>
+              <%= display_avatar(comment.user, width: 40, height: 40, class: 'rounded-circle mr-2') %>
               <strong><%= comment.user.username %></strong>
             </div>
             <% if comment.user == current_user %>

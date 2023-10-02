@@ -32,8 +32,7 @@
 
     <div class="user-sidebar">
       <div class="avatar">
-
-        <%= image_tag(url_for(@user.avatar), class: 'img-fluid') if @user.avatar.attached? %>
+        <%= display_avatar(@user, class: 'img-fluid') %>
       </div>
       <h2><%= @user.username %></h2>
       <p><%= @user.bio %></p>

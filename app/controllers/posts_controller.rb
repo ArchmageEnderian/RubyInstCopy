@@ -1,7 +1,7 @@
 class PostsController < ApplicationController
   before_action :set_post, only: %i[edit update show destroy]
   before_action :authenticate_user!, except: %i[index show]
-
+  helper :users
   def index
     @posts = if user_signed_in?
                Post.where(user: current_user.following).order(created_at: :desc)
